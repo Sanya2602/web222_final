@@ -1,0 +1,154 @@
+<!-- Name: Sanya Khurana
+Student ID: 146381215
+Email: skhurana26@myseneca.ca-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>SANYA KHURANA WEB Final</title>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="./Assets/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <div class="website">
+        <header class="navbar">
+            <nav>
+                <div class="nav-menu">
+                    <div class="menu">
+                        <ul class="nav-links">
+                            <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">ABOUT ME</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#education">EDUCATION</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </header>
+
+    
+
+        <main class="main">
+            
+            <section class="home" id="home">
+                <div class="home-content">
+                    <div class="my_image">
+                        <a href="index.html"><img src="./Assets/Images/my_image.jpeg" alt="my_image"></a>
+                    </div>
+                    <div class="home-text">
+                        <h3>Hi</h3>
+                        <h2>I'm Sanya Khurana</h2>
+                        <p>I am international student who came from India to pursue my studies in Computer Programming and Analysis at Seneca College.</p>
+                    </div>
+                    <div class="home-btns">
+                        <a download="Resume_sanya.pdf" href="./Assets/Files/Resume_sanya.pdf"><button class="btn"><i class="uil uil-import"></i>Resume</button></a>
+                        <a href="#contact"><button class="btn">Contact Me</button></a>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section class="about" id="about">
+                <h2 class="heading">ABOUT</h2>
+                <div class="about-content">
+                    <div class="about-details">
+                        <span class="abt-span">Personal Information</span>
+                        <pre><strong>Age:</strong>              18</pre>
+                        <pre><strong>e-mail:</strong>           skhurana26@myseneca.ca</pre>
+                        <pre><strong>Language:</strong>         Hindi, English, Punjabi</pre>
+                        <pre><strong>Class Section:</strong>    NDD</pre>
+                        <pre><strong>Student ID:</strong>       146381215</pre>
+                        <pre><strong>Instructor:</strong>       Muath Alzghool</pre>
+                    </div>
+                    <div class="about-text">
+                        <span class="abt-span">About Me and Academic Honesty</span>
+                        <p>I declare that my assessment is wholly my own work in accordance with Seneca Academic Policy. No part of this assessment has been copied manually or electronically from any other source (including web sites) except for the information supplied by the WEB222 instructors and / or made available in this assessment for my use. I also declare that no part of this assignment has been distributed to other students.</p>
+                        <span><strong>Date: </strong></span><p>Aug 12, 2022</p>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section class="education" id="education">
+                <h2 class="heading">EDUCATION</h2>
+                <div class="education-content">
+                    <div class="education-box">                      
+                        <h2>Highschool completed, NC Jindal Public School</h2>
+                        <p>May 2021</p>
+                    </div>
+                    <div class="education-box">                        
+                        <h2>Computer Programming and Analysis, Seneca College</h2>
+                        <p>2022-2024</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="contact" class="contact">
+                <h1 class="h1 contact-title">Contact me</h1>
+                <form name="contactForm" method="post" action="https://httpbin.org/post" onsubmit="return formValidate()">
+        
+                    <ul class="form-ul">
+                   <input id="name" type="text" name="cname" placeholder="Name">
+                   <input id="email" type="email" name="cemail" placeholder="Email">
+                   <input type="text" name="caddress" placeholder="Address">
+                   <input id="city" list="canadacity" type="text" name="ccity" placeholder="City">
+        
+                    <datalist id="canadacity">
+                        <option value="Toronto">
+                        <option value="Montreal">
+                        <option value="Calgary">
+                        <option value="Vancouver">
+                        <option value="Ottawa">
+                    </datalist>
+                  
+                   <input id="postcode" type="text" name="cpostalcode" placeholder="Postal Code">
+        
+            
+                    <select id="state" name="cstate" id="cstate">
+                        <option value="AB">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MB">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NS">Nova Scotia</option>
+                    </select>
+                    
+        
+                    <fieldset class="about">
+                     <legend> what this is about? </legend>
+                     <label> <input id="question" type=radio name=about value="Questions"  onclick="return showRate(1)"> Questions </label>
+                     <label> <input id="comment" type=radio name=about value="Comments"  onclick="return showRate(1)"> Comments </label>
+                     <label> <input id="hiring" type=radio name=about value="Hiring" onclick="return showRate(0)"> Hiring </label>
+                    </fieldset>
+        
+                    <div id="rate" class="rate">
+                    <input id="hrate" type="text" name="hourlyrate" placeholder="Hourly Rate">
+                    </div>
+        
+                     <textarea name="cmessage" placeholder="Message" rows="5"></textarea>
+                     <input type="submit" value="Submit">
+                    </ul>
+                    </form>
+            </section>       
+        </div>
+        </body>
+        </html>
+        <script src="./Assets/script.js"></script>
+</body>
+</html>

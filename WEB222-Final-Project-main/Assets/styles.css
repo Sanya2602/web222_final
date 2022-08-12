@@ -1,0 +1,603 @@
+/* Name: Sanya Khurana
+Student Number: 146381215
+Email: skhurana26@myseneca.ca
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button, input {
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #FFC18F;
+    border: 1px solid #FFC18F;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin: 10px 10px 180px 10px;
+}
+
+.btn:hover {
+    border: 1px solid #FFC18F;
+    background: #FFC18F;
+    transition: 1s;
+    color: #000;
+}
+
+.btn a {
+    color: #fff;
+    font-weight: 800;
+}
+
+.btn i {
+    color: #fff;
+    font-weight: 800;
+}
+
+.heading {
+    padding-top: 40px;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #FFD9BA;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ==================== Navbar ==================== */
+.navbar {
+    overflow: hidden;
+    background-color: #0F0119;
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    z-index: 400;
+    right: 0;
+}
+
+.nav-item {
+    list-style: none;
+    display: inline-block;
+    padding: 15px 45px 15px 0;
+    position: relative;
+}
+
+.nav-link {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-item::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #FFAB8f;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-item:hover::after{
+    width: 100%;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+}
+
+.menu-icon div {
+    display: block;
+    background-color: #FFF;
+    height: 2px;
+    width: 24px;
+    transition: 0.3s;
+}
+
+.move .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.move .line2 {
+    opacity: 0;
+}
+
+.move .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* ==================== Home Page ==================== */
+.home {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(177, 64, 243, 0.3)),url(Images/bg-img.png);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-content {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1024px;
+    margin: auto;
+}
+
+.home-img {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    margin-top: 100px;
+    width: 250px;
+    height: 250px;
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.home-text h3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #CE205B;
+}
+
+.home-text h3::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    left: -15px;
+    width: 20px;
+    height: 2px;
+    background: #CE205B;
+}
+
+.home-text h3::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    right: -35px;
+    width: 20px;
+    height: 2px;
+    background: #CE205B;
+}
+
+.home-text h2 {
+    font-size: 4.5rem;
+    line-height: 8rem;
+    color: #FFC18F;
+}
+
+.home-text p {
+    font-size: 0.938rem;
+    margin-bottom: 1.5rem;
+    color: #FFF;
+    max-width: 800px;
+}
+
+.color {
+    color: #77D5D5;
+}
+
+.uil-import {
+    padding-right: 10px;
+}
+
+/* ==================== About Page ==================== */
+.about {
+    background-color: #811576;
+    padding: 30px;
+}
+
+.about-content {
+    max-width: 1024px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.abt-span {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ADEDEA;
+}
+
+.about-details {
+    font-size: 1.2rem;
+    line-height: 2.6rem;
+    font-weight: 300;
+}
+
+.about-details pre, span {
+    color: #fff;
+}
+
+.about-text p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.about-content {
+    padding-bottom: 60px;
+}
+
+/* ==================== Education Page ==================== */
+.education {
+    background-color: #5A249E;
+}
+
+.education-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+.education-box {
+    width: 400px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin: 30px;
+    background: #9B094E;
+    border-radius: 0.4em;
+}
+
+.education-box:hover {
+    transform: scale(1.05);
+    transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.education-box .uil {
+    font-size: 1.7rem;
+    color: #FFD9BA;
+    padding: 10px 18px;
+    border-radius: 50%;
+    border: 2px dashed;
+    border-color: #FFD9BA;
+}
+
+.education-box h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: #77D5D5;
+}
+
+.education-box p {
+    font-size: 0.9rem;
+    color: pink;
+}
+
+/* =================== Contact Form ==================== */
+label {
+    color: white;
+    font-weight: 600;
+}
+
+.contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(177, 64, 243, 0.3)),url(Images/bg-img-2.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-form {
+    max-width: 450px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    row-gap: 1rem;
+}
+
+.contact-form .format, .contact-form textarea {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 15px;
+    color: #000;
+    background: #FFF;
+    border-radius: 0.4rem;
+}
+
+select option {
+    padding: 15px;
+    font-weight: 600;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+form .btn {
+    margin-bottom: 50px;
+}
+
+#error pre {
+    color: #DF4759;
+    margin-bottom: 20px;
+    font-weight: 200;
+    padding: 0 15px;
+}
+
+#error {
+    background: #0F0119;
+    margin-bottom: 20px;
+}
+
+form{
+    padding: 0 5% 0 5%;
+}
+
+label{
+    color: white;
+    font-size: 1.25rem;
+}
+input[type=text ], input[type=email], input[type=tel], textarea , select{
+    width: 100%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=submit] {
+    width: 100%;
+    background-color: wheat;
+    color: black;
+    padding: 14px 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 100px;
+  }
+  .about input[type=radio] {
+    display: inline;
+    color: wheat;
+  }
+
+  legend{
+    font-size: 1.5rem;
+    color: white;
+  }
+.rate{
+    display: none;
+}
+#name{
+    width: 48%;
+    float: left;
+}
+#email{
+    width: 48%;
+    float: left;
+    margin-left: 4%;
+}
+#city{
+    width: 32.33%;
+    float: left;
+}
+#state{
+    width: 32.33%;
+    float: left;
+    margin-left: 1.5%;
+}
+#postcode{
+    width: 32.33%;
+    float: left;
+    margin-left: 1.5%;
+
+}
+.contact-title{
+    margin-top: 20%;
+ }
+ .edu-title{
+    margin-top: 20%;
+ }
+
+
+#error h3 {
+    color: #FFC18F;
+    margin-bottom: 20px;
+    padding: 15px 15px 0 15px;
+}
+
+/* =================== Footer ==================== */
+.footer {
+    background: #0F0119;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    color: #FFC18F;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.footer p {
+    color: #ADEDEA;
+    margin-bottom: 20px;
+}
+
+.footer p span {
+    color: #cf11bc;
+    font-weight: 600;
+}
+
+.icons .uil {
+    font-size: 30px;
+    color: #CE205B;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px;
+}
+
+.icons .uil:hover {
+    color: #ADEDEA;
+    transition: 0.6s;
+}
+
+/* ==================== Making the website responsive using media queries ==================== */
+/* Smaller Size */
+@media (max-width: 850px) {
+    .menu-icon {
+        display: flex;
+        position: fixed;
+        float: left;
+        padding: 20px;
+        background-color: #0F0119;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: #0F0119;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        z-index: 300;
+    }
+
+    .open-menu {
+        right: 0;
+        transition: 0.5s;
+    }
+
+    .nav-link {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    .home-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .home-text h2 {
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+
+    .home-text p {
+        font-size: 0.75rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        font-size: 4rem;
+    }
+}
+
+/* Even Smaller Size */
+@media (max-width: 550px) {
+    .home-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .home-text h2 {
+        font-size: 2.3rem;
+        line-height: 3.2rem;
+    }
+
+    .home-text p {
+        font-size: 0.5rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        font-size: 3.2rem;
+    }
+
+    .about-text p {
+        font-size: 0.5rem;
+    }
+
+    .about-details pre {
+        font-size: 0.9rem;
+    }
+    
+    .abt-span {
+        font-size: 1.5rem;
+    }
+}
